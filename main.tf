@@ -9,10 +9,10 @@ resource "newrelic_alert_policy" "policy" {
 }
 
 resource "newrelic_nrql_alert_condition" "apdex_condition" {
-    count = length(var.var-name)
+  count     = length(var.var-name)
   policy_id = newrelic_alert_policy.policy.id
-  name = var.var-name[count.index]
- 
+  name      = var.var-name[count.index]
+
   type        = "static"
   runbook_url = var.runbook_url
   enabled     = true
@@ -64,4 +64,4 @@ resource "newrelic_nrql_alert_condition" "error_rate_condition" {
     evaluation_offset = 3
   }
 
- }
+}

@@ -1,17 +1,17 @@
 variable "var-name" {
-    type = list(string)
-  
+  type = list(string)
+
 }
 variable "application_name" {
   description = "The name of the New Relic application to monitor"
   type        = string
-  default= "Swaranjal"
+  default     = "Swaranjal"
 }
 
 variable "account_id" {
   description = "The account ID the application reports to"
   type        = number
-  default= 3931820
+  default     = 3931820
 }
 
 variable "policy_name" {
